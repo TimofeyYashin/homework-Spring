@@ -1,6 +1,7 @@
 package com.example.spring.controller;
 
 import com.example.spring.Product;
+import com.example.spring.ProductDTO;
 import com.example.spring.service.BucketService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import java.util.List;
-@RequestMapping("/products")
+@RequestMapping("/order")
 @RestController
 @Slf4j
 public class Controller {
@@ -28,7 +29,7 @@ public class Controller {
     }
 
     @GetMapping(path = "/get")
-    public List<Product> get() {
+    public List<ProductDTO> get() {
         return bucketService.get();
     }
 }
